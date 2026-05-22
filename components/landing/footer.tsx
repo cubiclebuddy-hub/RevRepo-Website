@@ -1,5 +1,7 @@
 "use client"
 
+import { Facebook, Instagram, Linkedin, Mail } from "lucide-react";
+
 import Image from "next/image"
 import Link from "next/link"
 
@@ -44,36 +46,6 @@ export function Footer() {
           {/* Navigation */}
           <div className="grid grid-cols-2 gap-10 sm:grid-cols-3">
 
-            {/* Product */}
-            <div>
-              <h3 className="mb-4 text-sm font-semibold text-foreground">
-                Product
-              </h3>
-
-              <div className="space-y-3">
-                <Link
-                  href="#features"
-                  className="block text-sm text-muted-foreground transition-colors hover:text-foreground"
-                >
-                  Features
-                </Link>
-
-                <Link
-                  href="#pricing"
-                  className="block text-sm text-muted-foreground transition-colors hover:text-foreground"
-                >
-                  Pricing
-                </Link>
-
-                <Link
-                  href="#about"
-                  className="block text-sm text-muted-foreground transition-colors hover:text-foreground"
-                >
-                  About
-                </Link>
-              </div>
-            </div>
-
             {/* Company */}
             <div>
               <h3 className="mb-4 text-sm font-semibold text-foreground">
@@ -82,24 +54,24 @@ export function Footer() {
 
               <div className="space-y-3">
                 <Link
-                  href="#contact"
+                  href="/careers"
                   className="block text-sm text-muted-foreground transition-colors hover:text-foreground"
                 >
-                  Contact
+                  Careers
                 </Link>
 
                 <Link
-                  href="#"
+                  href="/privacy-policy"
                   className="block text-sm text-muted-foreground transition-colors hover:text-foreground"
                 >
                   Privacy Policy
                 </Link>
 
                 <Link
-                  href="#"
+                  href="/leadership"
                   className="block text-sm text-muted-foreground transition-colors hover:text-foreground"
                 >
-                  Terms & Support
+                  Leadership & Staff
                 </Link>
               </div>
             </div>
@@ -112,10 +84,10 @@ export function Footer() {
 
               <div className="space-y-3">
                 <a
-                  href="mailto:sales@revrepo.in"
+                  href="mailto:info@revrepo.in"
                   className="block text-sm text-muted-foreground transition-colors hover:text-foreground"
                 >
-                  sales@revrepo.in
+                  info@revrepo.in
                 </a>
 
                 <a
@@ -143,25 +115,20 @@ export function Footer() {
           </p>
 
           <div className="flex items-center gap-6">
-            <Link
-              href="#"
-              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-            >
-              Privacy
+            <Link href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            <Facebook className="w-5 h-5 text-muted-foreground hover:text-foreground transition-colors" />
             </Link>
 
-            <Link
-              href="#"
-              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-            >
-              Terms
+            <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <Instagram className="w-5 h-5 text-muted-foreground hover:text-foreground transition-colors" />
             </Link>
 
-            <Link
-              href="#contact"
-              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-            >
-              Support
+            <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <Linkedin className="w-5 h-5 text-muted-foreground hover:text-foreground transition-colors" />
+            </Link>
+
+            <Link href="#contact">
+            <Mail className="w-5 h-5 text-muted-foreground hover:text-foreground transition-colors" />
             </Link>
           </div>
         </div>

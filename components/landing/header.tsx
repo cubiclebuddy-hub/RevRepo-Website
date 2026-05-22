@@ -54,10 +54,10 @@ export function Header({ onCtaClick }: HeaderProps) {
           </Link>
 
           <Link
-            href="#contact"
+            href="/careers"
             className="text-sm text-muted-foreground transition-colors hover:text-foreground"
           >
-            Contact
+            Careers
           </Link>
         </nav>
 
