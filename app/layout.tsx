@@ -1,36 +1,116 @@
-import type { Metadata, Viewport } from 'next'
-import { Inter } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
-import './globals.css'
+import type {
+  Metadata,
+  Viewport,
+} from "next"
 
-const inter = Inter({ 
+import { Inter } from "next/font/google"
+
+import { Analytics } from "@vercel/analytics/next"
+
+import "./globals.css"
+
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-sans"
-});
+  variable: "--font-sans",
+  display: "swap",
+})
 
 export const metadata: Metadata = {
-  title: 'RevRepo – Revenue Intelligence Platform',
-  description: 'Turn hidden data into revenue growth. RevRepo unifies your scattered business data into one powerful dashboard to track, predict, and grow revenue.',
-  keywords: ['revenue intelligence', 'business analytics', 'dashboard', 'revenue tracking', 'customer insights', 'smart analytics'],
-  authors: [{ name: 'RevRepo' }],
-  openGraph: {
-    title: 'RevRepo – Revenue Intelligence Platform',
-    description: 'Turn hidden data into revenue growth. One dashboard. Complete revenue clarity. Real-time control.',
-    url: 'https://www.revrepo.in',
-    siteName: 'RevRepo',
-    type: 'website',
+  metadataBase: new URL("https://www.revrepo.in"),
+
+  title: {
+    default: "RevRepo — Revenue Intelligence Platform",
+    template: "%s | RevRepo",
   },
+
+  description:
+    "Turn hidden business data into revenue growth. RevRepo centralizes analytics, customer insights, and operational intelligence into one powerful platform.",
+
+  keywords: [
+    "Revenue Intelligence",
+    "Business Analytics",
+    "AI Dashboard",
+    "Revenue Tracking",
+    "Customer Insights",
+    "Growth Intelligence",
+    "Predictive Analytics",
+    "Business Intelligence",
+    "CRM Analytics",
+    "Operational Insights",
+  ],
+
+  authors: [
+    {
+      name: "RevRepo",
+      url: "https://www.revrepo.in",
+    },
+  ],
+
+  creator: "RevRepo",
+
+  publisher: "RevRepo",
+
+  applicationName: "RevRepo",
+
+  category: "Business",
+
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+
+  openGraph: {
+    title: "RevRepo — Revenue Intelligence Platform",
+
+    description:
+      "One dashboard. Complete revenue clarity. Real-time business intelligence powered by AI.",
+
+    url: "https://www.revrepo.in",
+
+    siteName: "RevRepo",
+
+    locale: "en_US",
+
+    type: "website",
+  },
+
   twitter: {
-    card: 'summary_large_image',
-    title: 'RevRepo – Revenue Intelligence Platform',
-    description: 'Turn hidden data into revenue growth.',
+    card: "summary_large_image",
+
+    title: "RevRepo — Revenue Intelligence Platform",
+
+    description:
+      "Turn hidden business data into revenue growth.",
+
+    creator: "@revrepo",
+  },
+
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
 }
 
 export const viewport: Viewport = {
-  themeColor: '#0a0a14',
-  width: 'device-width',
+  width: "device-width",
+
   initialScale: 1,
+
+  maximumScale: 1,
+
+  themeColor: "#050816",
+
+  colorScheme: "dark",
 }
 
 export default function RootLayout({
@@ -39,10 +119,19 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="bg-background">
-      <body className={`${inter.variable} font-sans antialiased`}>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className="dark"
+    >
+      <body
+        className={`${inter.variable} min-h-screen bg-background font-sans antialiased`}
+      >
         {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
+
+        {process.env.NODE_ENV === "production" && (
+          <Analytics />
+        )}
       </body>
     </html>
   )
