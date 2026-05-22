@@ -127,7 +127,7 @@ export function Footer() {
             <Linkedin className="w-5 h-5 text-muted-foreground hover:text-foreground transition-colors" />
             </Link>
 
-            <Link href="#contact">
+            <Link href="mailto:info@revrepo.com">
             <Mail className="w-5 h-5 text-muted-foreground hover:text-foreground transition-colors" />
             </Link>
           </div>

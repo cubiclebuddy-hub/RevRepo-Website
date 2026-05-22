@@ -11,15 +11,15 @@ type TeamMember = {
 const team: TeamMember[] = [
   {
     id: "1",
-    name: "Aarav Sharma",
+    name: "Prathamesh Naik",
     role: "Founder & CEO",
     department: "Leadership",
     image: "/team/ceo.jpg",
   },
   {
     id: "2",
-    name: "Priya Mehta",
-    role: "Head of Product",
+    name: "Shweta Kolhe",
+    role: "Head of Human Resources",
     department: "Leadership",
     image: "/team/product.jpg",
   },
@@ -42,8 +42,8 @@ const team: TeamMember[] = [
 export default function LeadershipPage() {
   return (
     <div className="max-w-6xl mx-auto px-6 py-16">
-      <h1 className="text-3xl font-bold mb-2">Leadership & Staff</h1>
-      <p className="text-muted-foreground mb-10">
+      <h1 className="bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 bg-clip-text text-transparent">Leadership & Staff</h1>
+      <p className="mx-auto mt-8 max-w-3xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
         Meet the people building and driving our company forward.
       </p>
 

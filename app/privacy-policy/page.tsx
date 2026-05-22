@@ -71,7 +71,7 @@ export default function PrivacyPolicyPage() {
               href="mailto:support@revrepo.com"
               className="text-blue-500 hover:underline"
             >
-              support@revrepo.com
+              info@revrepo.com
             </Link>
             .
           </p>
