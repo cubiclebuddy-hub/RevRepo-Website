@@ -5,7 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
 
-import { Button } from "@/components/ui/button"
+import { Button, Button } from "@/components/ui/button"
 
 interface HeaderProps {
   onCtaClick?: () => void
@@ -63,19 +63,14 @@ export function Header({ onCtaClick }: HeaderProps) {
 
         {/* Desktop Buttons */}
         <div className="hidden items-center gap-3 md:flex">
-          <Link
-  href="https://app.revrpo.in"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <Button
-    variant="ghost"
-    size="sm"
-    className="text-muted-foreground hover:text-foreground"
-  >
-    Sign In
-  </Button>
-</Link>
+          <Button
+          variant="ghost"
+          size="sm"
+          className="text-muted-foreground hover:text-foreground"
+          onClick={() => window.location.href = "https://app.revrpo.in"}
+          >
+            Sign In
+          </Button>
 
           <Button
             size="sm"
@@ -133,19 +128,14 @@ export function Header({ onCtaClick }: HeaderProps) {
             </Link>
 
             <div className="flex flex-col gap-2 pt-4">
-              <Link
-  href="https://app.revrpo.in"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <Button
-    variant="ghost"
-    size="sm"
-    className="w-full text-muted-foreground"
-  >
-    Sign In
-  </Button>
-</Link>
+              <Button
+                variant="ghost"
+                size="sm"
+                className="w-full text-muted-foreground"
+                onClick={() => window.location.href = "https://app.revrpo.in"}
+                >
+                  Sign In
+              </Button>
 
               <Button
                 size="sm"
