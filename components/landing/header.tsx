@@ -63,13 +63,19 @@ export function Header({ onCtaClick }: HeaderProps) {
 
         {/* Desktop Buttons */}
         <div className="hidden items-center gap-3 md:flex">
-          <Button
-            variant="ghost"
-            size="sm"
-            className="text-muted-foreground hover:text-foreground"
-          >
-            Sign In
-          </Button>
+          <Link
+  href="https://app.revrpo.in"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Button
+    variant="ghost"
+    size="sm"
+    className="text-muted-foreground hover:text-foreground"
+  >
+    Sign In
+  </Button>
+</Link>
 
           <Button
             size="sm"
@@ -135,7 +141,7 @@ export function Header({ onCtaClick }: HeaderProps) {
   <Button
     variant="ghost"
     size="sm"
-    className="text-muted-foreground hover:text-foreground"
+    className="w-full text-muted-foreground"
   >
     Sign In
   </Button>
