@@ -67,7 +67,7 @@ export function Header({ onCtaClick }: HeaderProps) {
           variant="ghost"
           size="sm"
           className="text-muted-foreground hover:text-foreground"
-          onClick={() => { window.location.href = "https://app.revrepo.in"}}
+          onClick={() => { window.open("https://app.revrepo.in", "_blank")}}
           >
             Sign In
           </Button>
@@ -132,7 +132,7 @@ export function Header({ onCtaClick }: HeaderProps) {
                 variant="ghost"
                 size="sm"
                 className="w-full text-muted-foreground"
-                onClick={() => { window.location.href = "https://app.revrepo.in"}}
+                onClick={() => { window.open("https://app.revrepo.in", "_blank")}}
                 >
                   Sign In
               </Button>
