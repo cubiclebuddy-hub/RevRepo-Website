@@ -127,13 +127,19 @@ export function Header({ onCtaClick }: HeaderProps) {
             </Link>
 
             <div className="flex flex-col gap-2 pt-4">
-              <Button
-                variant="ghost"
-                size="sm"
-                className="w-full text-muted-foreground"
-              >
-                Sign In
-              </Button>
+              <Link
+  href="https://app.revrpo.in"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Button
+    variant="ghost"
+    size="sm"
+    className="text-muted-foreground hover:text-foreground"
+  >
+    Sign In
+  </Button>
+</Link>
 
               <Button
                 size="sm"
