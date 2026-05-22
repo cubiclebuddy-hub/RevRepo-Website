@@ -31,7 +31,7 @@ export function Footer() {
                 width={190}
                 height={60}
                 priority
-                className="h-auto w-[170px] object-contain"
+                className="h-auto w-[170px] object-contain brightness-110"
               />
             </Link>
 

@@ -26,7 +26,7 @@ export function Header({ onCtaClick }: HeaderProps) {
             width={190}
             height={60}
             priority
-            className="h-auto w-[150px] object-contain mix-blend-lighten"
+            className="h-auto w-[150px] object-contain brightness-110"
           />
         </Link>
 
